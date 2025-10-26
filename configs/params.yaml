@@ -1,0 +1,22 @@
+experiment: default
+seed: 42
+data:
+  input_path: data/synth_claims.parquet
+features:
+  temporal_windows: [30, 90, 180]
+  rare_code_min_count: 50
+model:
+  type: xgboost
+  params:
+    max_depth: 6
+    n_estimators: 300
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+train:
+  test_size: 0.2
+  cv_folds: 5
+infer:
+  threshold: 0.7
+reports:
+  out_dir: reports
