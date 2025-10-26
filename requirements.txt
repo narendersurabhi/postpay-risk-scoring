@@ -1,0 +1,9 @@
+pandas
+pyarrow
+scikit-learn
+xgboost
+mlflow
+numpy
+matplotlib
+jupyterlab
+pyyaml
